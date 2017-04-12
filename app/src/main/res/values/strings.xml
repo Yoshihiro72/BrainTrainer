@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Brain Trainer</string>
+    <string name="score_verylow">泥酔レベル...</string>
+    <string name="score_low">ジジイレベル</string>
+    <string name="score_normal">凡人レベル</string>
+    <string name="score_a_littlehigh">平均越えレベル</string>
+    <string name="score_high">秀才レベル！</string>
+    <string name="score_veryhigh">天才レベル！！！</string>
+    <string name="score_extremelyhigh">【神域】</string>
+</resources>

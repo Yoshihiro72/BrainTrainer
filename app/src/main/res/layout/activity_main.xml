@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.admin.braintrainer.MainActivity"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/title">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/nhakase" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/titleLayout"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="135dp"
+                android:text="Let&apos;s"
+                android:id="@+id/title1"
+                android:layout_gravity="top|left|center_horizontal"
+                android:textSize="60dp"
+                android:textStyle="bold"
+                android:textColor="#323232"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="脳トレ"
+                android:id="@+id/title2"
+                android:layout_gravity="top|center_horizontal"
+                android:textSize="80dp"
+                android:textStyle="bold"
+                android:textColor="#323232" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="START"
+                android:id="@+id/titleBtn"
+                android:layout_gravity="center"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:textSize="40dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/game"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:id="@+id/timeLeft"
+                android:textSize="40dp" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score: 0"
+                android:id="@+id/curScore"
+                android:textSize="40dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正解！"
+            android:id="@+id/judgeText"
+            android:textSize="80dp"
+            android:gravity="center_horizontal"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="むらさき"
+            android:id="@+id/jCharactor"
+            android:textSize="80dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="New Button"
+                android:id="@+id/button1"
+                android:layout_weight="1"
+                android:layout_margin="7dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="blue"
+                android:id="@+id/button2"
+                android:layout_weight="1"
+                android:layout_margin="7dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="New Button"
+                android:id="@+id/button3"
+                android:layout_weight="1"
+                android:layout_margin="7dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="New Button"
+                android:id="@+id/button4"
+                android:layout_weight="1"
+                android:layout_margin="7dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:id="@+id/instruction">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ルール"
+            android:id="@+id/ruleTitle"
+            android:layout_gravity="center_horizontal"
+            android:textSize="70dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/ruleText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textSize="18dp"
+            android:text = "画面に色を表す文字が\nひらがなか漢字で表示されます\n\nひらがなの時は文字の色を\n漢字の時は文字の意味を\n\n下の英語のボタンの中から\n選択してください。\n制限時間は60秒です。\nミスは1点減点となります。"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/gameStartBtn"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textSize="35dp"
+            android:padding="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/result"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="診断結果"
+            android:id="@+id/resultTitle"
+            android:layout_gravity="center_horizontal"
+            android:textSize="60dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="あなたの得点は..."
+            android:id="@+id/resultText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultScore"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textSize="70dp"
+            android:text="13点"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/score_normal"
+            android:id="@+id/comment"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RETRY"
+            android:id="@+id/retryBtn"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:textSize="30dp"
+            android:padding="40dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:id="@+id/countDown"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/figure"
+            android:layout_gravity="center_vertical"
+            android:textSize="140dp" />
+    </LinearLayout>
+
+</LinearLayout>
